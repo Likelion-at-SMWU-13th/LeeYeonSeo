@@ -4,6 +4,7 @@ function checkSubmit() {
   
   if (!Confirm) {
     document.getElementById("form").reset();
+    alert("메세지를 전송을 취소하였습니다.");
     return false;
   } else {
     alert("메세지를 전송하였습니다!");
