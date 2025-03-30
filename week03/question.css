@@ -113,9 +113,17 @@ label {
   width: 60px;
   margin-right: 90px;
 }
+#mypage_home:hover {
+  background-color: #606060;
+  border-radius: 100px;
+}
 #mypage_me {
   width: 60px;
   margin-right: 90px;
+}
+#mypage_me:hover {
+  background-color: #606060;
+  border-radius: 100px;
 }
 #mypage_question {
   width: 60px;
