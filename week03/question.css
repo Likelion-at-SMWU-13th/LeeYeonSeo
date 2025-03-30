@@ -1,0 +1,122 @@
+body {
+  background-color: #1c1c1c;
+  padding: 10vh 100px;
+}
+
+/* header */
+header {
+  display: flex;
+}
+
+#logo_sookmutsa {
+  width: 145px;
+}
+
+nav {
+  position: relative;
+  left: calc(100vw - 450px);
+}
+
+#mypage {
+  width: 35px;
+  margin-right: 10px;
+}
+
+#logout {
+  width: 35px;
+}
+
+/* article */
+h1 {
+  color: #fff;
+  font-family: "YiSunShinDotumM";
+  font-size: 30px;
+}
+
+/* question */
+#abata_2 {
+  float: left;
+  margin-top: 10px;
+  margin-right: 67px;
+}
+
+h2 {
+  color: #FFF;
+  font-family: "YiSunShin Dotum M";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+label {
+  color: #FFF;
+  font-family: "YiSunShin Dotum M";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Nickname {
+  width: 553px;
+  height: 30px;
+  font-size: 20px;
+  color: #FFF;
+  background-color: #1c1c1c;
+  border-top: none;
+  border-left: none;
+  border-bottom: #FFF solid 1px;
+  border-right: none;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.Message {
+  width: 703px;
+  height: 200px;
+  font-size: 20px;
+  color: #FFF;
+  background-color: #1c1c1c;
+  border-top: none;
+  border-left: none;
+  border-bottom: #FFF solid 1px;
+  border-right: none;
+}
+
+.submit_btn {
+  width: 90px;
+  height: 40px;
+  border-radius: 30px;
+  border: 2.5px solid #97AFE3;
+  background: #97AFE3;
+  color: #FFF;
+  text-align: center;
+  font-family: "YiSunShin Dotum B";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  float: right;
+  margin-right: 90px;
+  margin-top: 10px;
+}
+
+/* bottom menu */
+.bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+}
+#mypage_home {
+  width: 60px;
+  margin-right: 90px;
+}
+#mypage_me {
+  width: 60px;
+  margin-right: 90px;
+}
+#mypage_question {
+  width: 60px;
+}
