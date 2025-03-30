@@ -102,6 +102,10 @@ label {
   margin-top: 10px;
 }
 
+.submit_btn:hover {
+  opacity: 0.8;
+}
+
 /* bottom menu */
 .bottom {
   position: absolute;
