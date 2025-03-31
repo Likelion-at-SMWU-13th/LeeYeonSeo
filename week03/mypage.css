@@ -1,0 +1,107 @@
+body {
+  background-color: #1c1c1c;
+  padding: 10vh 100px;
+}
+
+/* header */
+header {
+  display: flex;
+}
+
+#logo_sookmutsa {
+  width: 145px;
+}
+
+.top {
+  position: relative;
+  left: calc(100vw - 450px);
+}
+
+#mypage {
+  width: 35px;
+  margin-right: 10px;
+}
+
+#logout {
+  width: 35px;
+}
+
+/* article */
+h1 {
+  color: #fff;
+  font-family: "YiSunShinDotumM";
+  font-size: 30px;
+}
+
+.colorchange {
+  color: #97afe3;
+  font-family: "YiSunShinDotumB";
+  font-weight: normal;
+}
+
+p {
+  color: #97afe3;
+  font-family: "YiSunShinDotumM";
+  font-size: 25px;
+}
+
+/* introduce */
+#introduce {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 110px;
+}
+
+#abata_1 {
+  transform: translateX(+30%);
+}
+
+#explain {
+  text-align: center;
+}
+
+h2 {
+  color: #FFF;
+  font-family: "YiSunShin Dotum B";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h4 {
+  color: #FFF;
+  font-family: "YiSunShin Dotum B";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* bottom menu */
+.bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+}
+#mypage_home {
+  width: 60px;
+  margin-right: 90px;
+}
+#mypage_me {
+  width: 60px;
+  margin-right: 90px;
+}
+#mypage_me:hover {
+  background-color: #606060;
+  border-radius: 100px;
+}
+#mypage_question {
+  width: 60px;
+}
+#mypage_question:hover {
+  background-color: #606060;
+  border-radius: 100px;
+}
