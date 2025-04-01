@@ -74,14 +74,14 @@ h1 {
   height: 280px;
   transform: translateX(+18%);
   margin-bottom: 10px;
-  background-image: url('/images/셀카\ 1.svg');
+  background-image: url('./images/셀카\ 1.svg');
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
 }
 
 #img1:hover {
-  background-image: url('/images/셀카\ 3.svg');
+  background-image: url('./images/셀카\ 3.svg');
 }
 
 /* bottom menu */
