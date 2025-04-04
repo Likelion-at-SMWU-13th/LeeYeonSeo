@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="message.css" />
+    <title>🦁 메세지를 남겨주세요!</title>
+  </head>
+  <body>
+    <header>
+      <a href="main.html">
+        <img id="logo_sookmutsa" src="./images/숙멋사로고명 1.svg"
+      /></a>
+      <nav>
+        <a href="mypage.html"><img id="mypage" src="./images/mypage.svg"/></a>
+        <a href="login.html"><img id="logout" src="./images/logout.svg" /></a>
+      </nav>
+    </header>
+    <article>
+      <h1>지금까지 읽어주셔서 감사합니다!</h1>
+    </article>
+    <div class="question">
+      <img id="abata_2" src="./images/아바타 2.svg">
+      <form id="form" method="post" onsubmit="return checkSubmit()">
+        <h2>저에게 하고싶은 말을 남겨주세요!</h2>
+        <label for="Nickname">Nickname</label>
+        <input type="text" id="Nickname" class="Nickname" required/></br>
+        <label for="Message">Message</label></br>
+        <textarea id="Message" class="Message" required/></textarea></br>
+        <button type="submit" class="submit_btn">전송</button></br>
+      </form>
+    </div>
+    <nav class="bottom">
+      <a href="mypage.html"><img id="mypage_home" src="./images/home.svg"/></a>
+      <a href="me.html"><img id="mypage_me" src="./images/me.svg" /></a>
+      <a href="question.html"><img id="mypage_question" src="./images/send2.svg" /></a>
+    </nav>
+    <script src="message.js"></script>
+  </body>
+</html>
