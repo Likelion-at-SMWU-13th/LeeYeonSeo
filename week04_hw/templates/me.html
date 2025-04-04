@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <a href="main.html">
+      <a href="{% url 'main' %}">
         <img id="logo_sookmutsa" src="{% static 'images/숙멋사로고명 1.svg' %}"
       /></a>
       <nav>
@@ -70,7 +70,7 @@
     <nav class="bottom">
       <a href="{% url 'mypage' %}"><img id="mypage_home" src="{% static 'images/home.svg' %}"/></a>
       <a href="{% url 'me' %}"><img id="mypage_me" src="{% static 'images/me2.svg' %}" /></a>
-      <a href="message.html"><img id="mypage_question" src="{% static 'images/send.svg' %}" /></a>
+      <a href="{% url 'message' %}"><img id="mypage_question" src="{% static 'images/send.svg' %}" /></a>
     </nav>
   </body>
 </html>

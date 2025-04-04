@@ -38,3 +38,6 @@ def mypage(request):
 
 def me(request):
   return render(request, "me.html")
+
+def message(request):
+  return render(request, "message.html")

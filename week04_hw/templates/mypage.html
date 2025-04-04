@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <a href="main.html">
+    <a href="{% url 'main' %}">
       <img id="logo_sookmutsa" src="{% static 'images/숙멋사로고명 1.svg' %}"
     /></a>
     <nav class="top">
@@ -34,7 +34,7 @@
   <nav class="bottom">
     <a href="{% url 'mypage' %}"><img id="mypage_home" src="{% static 'images/home2.svg' %}"/></a>
     <a href="{% url 'me' %}"><img id="mypage_me" src="{% static 'images/me.svg' %}" /></a>
-    <a href="message.html"><img id="mypage_question" src="{% static 'images/send.svg' %}" /></a>
+    <a href="{% url 'message' %}"><img id="mypage_question" src="{% static 'images/send.svg' %}" /></a>
   </nav>
   {% else %}
     <p>로그인을 해주세요</p>
