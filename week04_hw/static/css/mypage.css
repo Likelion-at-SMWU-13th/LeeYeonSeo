@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'YiSunShinDotumM';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YiSunShinDotumM.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #1c1c1c;
+  padding: 10vh 100px;
+}
+
+/* header */
+header {
+  display: flex;
+}
+
+#logo_sookmutsa {
+  width: 145px;
+}
+
+.top {
+  position: relative;
+  left: calc(100vw - 450px);
+}
+
+#mypage {
+  width: 35px;
+  margin-right: 10px;
+}
+
+#logout {
+  width: 35px;
+}
+
+/* article */
+h1 {
+  color: #fff;
+  font-family: "YiSunShinDotumM";
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.colorchange {
+  color: #97afe3;
+  font-family: "YiSunShinDotumM";
+}
+
+p {
+  color: #97afe3;
+  font-family: "YiSunShinDotumM";
+  font-size: 25px;
+}
+
+/* introduce */
+#introduce {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 110px;
+}
+
+#abata_1 {
+  transform: translateX(+30%);
+}
+
+#explain {
+  text-align: center;
+}
+
+h2 {
+  color: #FFF;
+  font-family: "YiSunShinDotumM";
+  font-size: 40px;
+}
+
+h4 {
+  color: #FFF;
+  font-family: "YiSunShinDotumM";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* bottom menu */
+.bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+}
+#mypage_home {
+  width: 60px;
+  margin-right: 90px;
+}
+#mypage_me {
+  width: 60px;
+  margin-right: 90px;
+}
+#mypage_me:hover {
+  background-color: #606060;
+  border-radius: 100px;
+}
+#mypage_question {
+  width: 60px;
+}
+#mypage_question:hover {
+  background-color: #606060;
+  border-radius: 100px;
+}
