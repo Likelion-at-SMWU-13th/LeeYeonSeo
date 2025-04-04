@@ -42,8 +42,8 @@ h1 {
 
 .colorchange {
   color: #97afe3;
-  font-family: "YiSunShinDotumB";
-  font-weight: normal;
+  font-family: "YiSunShinDotumM";
+  font-weight: 600;
 }
 /* me */
 #me {
@@ -58,22 +58,18 @@ h1 {
 #me h3 {
   color: #97AFE3;
   text-align: center;
-  font-family: "YiSunShinDotumB";
+  font-family: "YiSunShinDotumM";
   font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-weight: 600;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 #me h4 {
   color: #FAFBFF;
-  font-family: "YiSunShinDotumB";
+  font-family: "YiSunShinDotumM";
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 #img1 {
@@ -81,14 +77,14 @@ h1 {
   height: 280px;
   transform: translateX(+18%);
   margin-bottom: 10px;
-  background-image: url('./images/셀카\ 1.svg');
+  background-image: url('/static/images/셀카 1.svg');
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
 }
 
 #img1:hover {
-  background-image: url('./images/셀카\ 3.svg');
+  background-image: url('/static/images/셀카 3.svg');
 }
 
 /* bottom menu */
@@ -155,11 +151,9 @@ h1 {
   margin: 10px 5px;
   color: #FFF;
   text-align: center;
-  font-family: "YiSunShinDotumB";
+  font-family: "YiSunShinDotumM";
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 #interest {
@@ -181,11 +175,9 @@ h1 {
 
 #interest h4 {
   color: #FAFBFF;
-  font-family: "YiSunShinDotumB";
+  font-family: "YiSunShinDotumM";
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 #hobby {
@@ -204,38 +196,30 @@ h1 {
 #hobby h4 {
   margin-top: 15px;
   color: #FAFBFF;
-  font-family: "YiSunShinDotumB";
+  font-family: "YiSunShinDotumM";
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 /*공통 속성*/
 
 h3 {
   color: #97AFE3;
-  font-family: "YiSunShinDotumB";
+  font-family: "YiSunShinDotumM";
   font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-weight: 600;
 }
 
 h4 {
   color: #FAFBFF;
-  font-family: "YiSunShinDotumB";
+  font-family: "YiSunShinDotumM";
   font-size: 20px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 #grade {
   color: #B3B3B3;
-  font-family: "YiSunShinDotumB";
+  font-family: "YiSunShinDotumM";
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }

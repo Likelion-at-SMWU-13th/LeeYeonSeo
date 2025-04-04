@@ -35,3 +35,6 @@ def logout(request):
   
 def mypage(request):
   return render(request, "mypage.html")
+
+def me(request):
+  return render(request, "me.html")

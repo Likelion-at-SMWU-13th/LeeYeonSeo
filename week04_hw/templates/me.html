@@ -1,19 +1,21 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="me.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/me.css' %}" />
     <title>🦁 자기소개</title>
   </head>
   <body>
     <header>
       <a href="main.html">
-        <img id="logo_sookmutsa" src="./images/숙멋사로고명 1.svg"
+        <img id="logo_sookmutsa" src="{% static 'images/숙멋사로고명 1.svg' %}"
       /></a>
       <nav>
-        <a href="mypage.html"><img id="mypage" src="./images/mypage.svg"/></a>
-        <a href="login.html"><img id="logout" src="./images/logout.svg" /></a>
+        <a href="{% url 'mypage' %}"><img id="mypage" src="{% static 'images/mypage.svg' %}"/></a>
+        <a href="{% url 'logout' %}"><img id="logout" src="{% static 'images/logout.svg' %}" /></a>
       </nav>
     </header>
     <div id="me">
@@ -66,9 +68,9 @@
       </h4>
     </div>
     <nav class="bottom">
-      <a href="mypage.html"><img id="mypage_home" src="./images/home.svg"/></a>
-      <a href="me.html"><img id="mypage_me" src="./images/me2.svg" /></a>
-      <a href="message.html"><img id="mypage_question" src="./images/send.svg" /></a>
+      <a href="{% url 'mypage' %}"><img id="mypage_home" src="{% static 'images/home.svg' %}"/></a>
+      <a href="{% url 'me' %}"><img id="mypage_me" src="{% static 'images/me2.svg' %}" /></a>
+      <a href="message.html"><img id="mypage_question" src="{% static 'images/send.svg' %}" /></a>
     </nav>
   </body>
 </html>
