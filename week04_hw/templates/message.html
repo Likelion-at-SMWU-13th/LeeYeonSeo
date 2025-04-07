@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/message.css' %}" />
+    <title>🦁 메세지를 남겨주세요!</title>
+  </head>
+  <body>
+    <header>
+      <a href="{% url 'main' %}">
+        <img id="logo_sookmutsa" src="{% static 'images/숙멋사로고명 1.svg' %}"
+      /></a>
+      <nav>
+        <a href="{% url 'mypage' %}"><img id="mypage" src="{% static 'images/mypage.svg' %}"/></a>
+        <a href="{% url 'logout' %}"><img id="logout" src="{% static 'images/logout.svg' %}" /></a>
+      </nav>
+    </header>
+    <article>
+      <h1>지금까지 읽어주셔서 감사합니다!</h1>
+    </article>
+    <div class="question">
+      <img id="abata_2" src="{% static 'images/아바타 2.svg' %}">
+      <form id="form" method="post" onsubmit="return checkSubmit()">
+      {% csrf_token %}
+        <h2>저에게 하고싶은 말을 남겨주세요!</h2>
+        <label for="Nickname">Nickname</label>
+        <input type="text" id="Nickname" class="Nickname" name="nickname" required/></br>
+        <label for="Message">Message</label></br>
+        <textarea id="Message" class="Message" name="message" required/></textarea></br>
+        <button type="submit" class="submit_btn">전송</button></br>
+      </form>
+    </div>
+    <nav class="bottom">
+      <a href="{% url 'mypage' %}"><img id="mypage_home" src="{% static 'images/home.svg' %}"/></a>
+      <a href="{% url 'me' %}"><img id="mypage_me" src="{% static 'images/me.svg' %}" /></a>
+      <a href="{% url 'message' %}"><img id="mypage_question" src="{% static 'images/send2.svg' %}" /></a>
+    </nav>
+    <script src="{% static 'js/message.js' %}"></script>
+  </body>
+</html>
