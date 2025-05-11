@@ -1,0 +1,90 @@
+body {
+  background-color: #f4f4f4;
+}
+
+#date {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #ffa250;
+}
+
+#search {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#searchText {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 300px;
+  flex-grow: 1;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  outline: none;
+  margin-right: 5px;
+}
+
+#searchBtn {
+  background-color: #ffa250;
+  color: white;
+  border-radius: 10px;
+  width: 50px;
+  border: none;
+  flex-grow: 1;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  outline: none;
+}
+
+#musicContainer {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.musicCard {
+  margin: 20px 20px 0px 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  text-align: left;
+}
+
+h3 {
+  margin: 15px auto 7px 7px;
+  font-size: 25px;
+}
+
+#singer {
+  margin: 7px auto 7px 7px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #606060;
+}
+
+.card-body {
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+.key {
+  color: #8a8a8a;
+  font-weight: 600;
+  padding-right: 20px;
+  padding-left: 5px;
+  width: 50px;
+}
+
+.value {
+  padding-right: 3rem;
+  width: 450px;
+}
