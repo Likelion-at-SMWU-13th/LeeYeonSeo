@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <h1>{liar}를 찾아라!</h1>
-      <LionCard1 />;
-      <LionCard2 />;
-      <LionCard3 />;
+      <LionCard1 />
+      <LionCard2 />
+      <LionCard3 />
     </>
   );
 }
