@@ -122,7 +122,7 @@ const LeftMenu = styled.div`
 
 const Header = () => {
   return (
-    <div>
+    <div style={{ position: "fixed", top: "0", width: "100%" }}>
       <Hr style={{ marginTop: "0px" }} />
       <Content>
         <LeftMenu>
