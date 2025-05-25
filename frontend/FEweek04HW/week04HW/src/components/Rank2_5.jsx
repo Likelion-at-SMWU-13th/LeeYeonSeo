@@ -30,7 +30,7 @@ const StarIcon = styled.img`
 `;
 
 const Rank2_5 = () => {
-  const isKorea = true;
+  const isKorea = false;
   return (
     <div>
       <Rank>

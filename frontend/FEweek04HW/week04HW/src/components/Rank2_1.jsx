@@ -30,7 +30,7 @@ const StarIcon = styled.img`
 `;
 
 const Rank2_1 = () => {
-  const isKorea1 = false;
+  const isKorea = false;
   return (
     <div>
       <Rank>
@@ -38,7 +38,7 @@ const Rank2_1 = () => {
         <p style={{ marginBottom: "10px" }}>미션 임파서블: 파이널 레코닝</p>
         <span>
           <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
-            {isKorea1 ? "2025 · 미국" : "2025 · 한국"}
+            {isKorea ? "2025 · 한국" : "2025 · 미국"}
           </span>
           <br />
           평균 <StarIcon src={star}></StarIcon> 3.7
