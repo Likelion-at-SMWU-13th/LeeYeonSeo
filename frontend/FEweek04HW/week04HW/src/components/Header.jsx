@@ -3,18 +3,16 @@ import logo1 from "../assets/WATCHAPEDIA_Logo1.svg";
 import glass from "../assets/MagGlasses.svg";
 import styled from "styled-components";
 
-const Hr = styled.hr`
-  border: none;
-  height: 1px;
-  background-color: #d9d9d9;
-  width: 100%;
-`;
 const Content = styled.div`
   display: flex;
   height: 3.5rem;
   align-items: center;
   justify-content: space-between;
   padding-right: 4.06rem;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0px;
+  background-color: #fff;
 `;
 const Img1 = styled.img`
   width: 135px;
@@ -113,17 +111,17 @@ const Signup = styled.button`
 
 const RightMenu = styled.div`
   display: flex;
+  margin-right: 4.06rem;
 `;
 const LeftMenu = styled.div`
   display: flex;
+  margin-left: 4.06rem;
   align-items: center;
-  margin-left: 3.69rem;
 `;
 
 const Header = () => {
   return (
     <div style={{ position: "fixed", top: "0", width: "100%" }}>
-      <Hr style={{ marginTop: "0px" }} />
       <Content>
         <LeftMenu>
           <Img1 src={logo1} />
@@ -148,7 +146,6 @@ const Header = () => {
           <Signup>회원가입</Signup>
         </RightMenu>
       </Content>
-      <Hr />
     </div>
   );
 };
