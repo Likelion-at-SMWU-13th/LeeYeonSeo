@@ -28,6 +28,23 @@ import watcha from "../assets/WATCHA_icon_Circle.svg";
 import comment1 from "../assets/comment1.svg";
 import comment2 from "../assets/comment2.svg";
 import comment3 from "../assets/comment3.svg";
+import culture1 from "../assets/culture1.svg";
+import culture2 from "../assets/culture2.svg";
+import culture3 from "../assets/culture3.svg";
+import culture4 from "../assets/culture4.svg";
+import culture5 from "../assets/culture5.svg";
+import series1 from "../assets/series1.svg";
+import series2 from "../assets/series2.svg";
+import series3 from "../assets/series3.svg";
+import series4 from "../assets/series4.svg";
+import series5 from "../assets/series5.svg";
+import netflix from "../assets/netflix.svg";
+import tving from "../assets/tving.svg";
+import rank2_1 from "../assets/rank2_1.svg";
+import rank2_2 from "../assets/rank2_2.svg";
+import rank2_3 from "../assets/rank2_3.svg";
+import rank2_4 from "../assets/rank2_4.svg";
+import rank2_5 from "../assets/rank2_5.svg";
 import styled from "styled-components";
 
 const Img1 = styled.img`
@@ -78,9 +95,22 @@ const MenuImg = styled.img`
 `;
 
 const ProgramList = styled.div`
-  display: flex;
+  display: grid;
   gap: 1rem;
   margin-top: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  padding-left: 4.06rem;
+  padding-right: 4.06rem;
+  box-sizing: border-box;
+`;
+
+const ProgramList2 = styled.div`
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   padding-left: 4.06rem;
   padding-right: 4.06rem;
   box-sizing: border-box;
@@ -159,7 +189,6 @@ const OttImg = styled.img`
 `;
 
 const Magazine = styled.div`
-  width: calc((100% - 2rem) / 3);
   span {
     color: #7e7e7e;
     font-size: 12px;
@@ -293,7 +322,7 @@ const Main = () => {
           <img src={chevron} style={{ marginLeft: "5px" }} />
         </span>
       </RankName>
-      <ProgramList>
+      <ProgramList2>
         <Magazine>
           <RankImg src={mag1}></RankImg>
           <OttImg
@@ -327,7 +356,7 @@ const Main = () => {
             왓챠의 감각 Part 2
           </p>
         </Magazine>
-      </ProgramList>
+      </ProgramList2>
       <RankName>
         <H3>지금 뜨는 코멘트</H3>
         <span>
@@ -335,10 +364,155 @@ const Main = () => {
           <img src={chevron} style={{ marginLeft: "5px" }} />
         </span>
       </RankName>
-      <ProgramList>
+      <ProgramList2>
         <RankImg src={comment1}></RankImg>
         <RankImg src={comment2}></RankImg>
         <RankImg src={comment3}></RankImg>
+      </ProgramList2>
+      <H3>2025 문화다양성 주간 큐레이션</H3>
+      <ProgramList>
+        <Rank>
+          <RankImg src={culture1}></RankImg>
+          <p>동주</p>
+          <span>
+            평균 <StarIcon src={star}></StarIcon> 3.9
+          </span>
+        </Rank>
+        <Rank>
+          <RankImg src={culture2}></RankImg>
+          <p>소풍</p>
+          <span>
+            평균 <StarIcon src={star}></StarIcon> 3.0
+          </span>
+        </Rank>
+        <Rank>
+          <RankImg src={culture3}></RankImg>
+          <p>악마는 프라다를 입는다</p>
+          <span>
+            평균 <StarIcon src={star}></StarIcon> 4.0
+          </span>
+        </Rank>
+        <Rank>
+          <RankImg src={culture4}></RankImg>
+          <p>컨택트</p>
+          <span>
+            평균 <StarIcon src={star}></StarIcon> 4.0
+          </span>
+        </Rank>
+        <Rank>
+          <RankImg src={culture5}></RankImg>
+          <p>인비저블 게스트</p>
+          <span>
+            평균 <StarIcon src={star}></StarIcon> 3.8
+          </span>
+        </Rank>
+      </ProgramList>
+      <RankName>
+        <H3>시리즈 공개 예정작</H3>
+        <span>
+          더보기
+          <img src={chevron} style={{ marginLeft: "5px" }} />
+        </span>
+      </RankName>
+      <ProgramList>
+        <Dday>
+          <RankImg src={series1}></RankImg>
+          <p>낙유원</p>
+          <OttImg src={netflix}></OttImg>
+          <span style={{ color: "#FF2F6E" }}>2025.05.26</span>
+        </Dday>
+        <Dday>
+          <RankImg src={series2}></RankImg>
+          <p>미제 사건: 타이레놀 살인</p>
+          <OttImg src={netflix}></OttImg>
+          <span style={{ color: "#FF2F6E" }}>2025.05.26</span>
+        </Dday>
+        <Dday>
+          <RankImg src={series3}></RankImg>
+          <p>월드 오브 스트릿 우먼 파이터</p>
+          <OttImg src={tving}></OttImg>
+          <span style={{ color: "#FF2F6E" }}>2025.05.27</span>
+        </Dday>
+        <Dday>
+          <RankImg src={series4}></RankImg>
+          <p>작은 불씨는 어디에나</p>
+          <OttImg src={disney}></OttImg>
+          <span style={{ color: "#FF2F6E" }}>2025.05.28</span>
+        </Dday>
+        <Dday>
+          <RankImg src={series5}></RankImg>
+          <p>F1 아카데미</p>
+          <OttImg src={netflix}></OttImg>
+          <span style={{ color: "#FF2F6E" }}>2025.05.28</span>
+        </Dday>
+      </ProgramList>
+      <RankName>
+        <H3>박스오피스 순위</H3>
+        <span>
+          더보기
+          <img src={chevron} style={{ marginLeft: "5px" }} />
+        </span>
+      </RankName>
+      <ProgramList>
+        <Rank>
+          <RankImg src={rank2_1}></RankImg>
+          <p style={{ marginBottom: "10px" }}>미션 임파서블: 파이널 레코닝</p>
+          <span>
+            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
+              2025 · 미국
+            </span>
+            <br />
+            평균 <StarIcon src={star}></StarIcon> 3.7
+            <br />
+            예매율 30% · 누적 관객 159.5만명
+          </span>
+        </Rank>
+        <Rank>
+          <RankImg src={rank2_2}></RankImg>
+          <p style={{ marginBottom: "10px" }}>하이파이브</p>
+          <span>
+            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
+              2025 · 한국
+            </span>
+            <br />
+            예매율 20% · 누적 관객 493명
+          </span>
+        </Rank>
+        <Rank>
+          <RankImg src={rank2_3}></RankImg>
+          <p style={{ marginBottom: "10px" }}>소주전쟁</p>
+          <span>
+            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
+              2025 · 한국
+            </span>
+            <br />
+            예매율 15% · 누적 관객 268명
+          </span>
+        </Rank>
+        <Rank>
+          <RankImg src={rank2_4}></RankImg>
+          <p style={{ marginBottom: "10px" }}>드래곤 길들이기</p>
+          <span>
+            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
+              2025 · 미국
+            </span>
+            <br />
+            예매율 4.45
+          </span>
+        </Rank>
+        <Rank>
+          <RankImg src={rank2_5}></RankImg>
+          <p style={{ marginBottom: "10px" }}>릴로 & 스티치</p>
+          <span>
+            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
+              2025 · 미국
+            </span>
+            <br />
+            평균 <StarIcon src={star}></StarIcon> 3.5
+            <br />
+            예매율 4.1% · 누적 관객 12.4만명
+          </span>
+        </Rank>
       </ProgramList>
     </div>
   );
