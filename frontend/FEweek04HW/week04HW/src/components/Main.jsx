@@ -40,12 +40,12 @@ import series4 from "../assets/series4.svg";
 import series5 from "../assets/series5.svg";
 import netflix from "../assets/netflix.svg";
 import tving from "../assets/tving.svg";
-import rank2_1 from "../assets/rank2_1.svg";
-import rank2_2 from "../assets/rank2_2.svg";
-import rank2_3 from "../assets/rank2_3.svg";
-import rank2_4 from "../assets/rank2_4.svg";
-import rank2_5 from "../assets/rank2_5.svg";
 import styled from "styled-components";
+import Rank2_1 from "./Rank2_1";
+import Rank2_2 from "./Rank2_2";
+import Rank2_3 from "./Rank2_3";
+import Rank2_4 from "./Rank2_4";
+import Rank2_5 from "./Rank2_5";
 
 const Img1 = styled.img`
   padding-left: 4.06rem;
@@ -454,65 +454,11 @@ const Main = () => {
         </span>
       </RankName>
       <ProgramList>
-        <Rank>
-          <RankImg src={rank2_1}></RankImg>
-          <p style={{ marginBottom: "10px" }}>미션 임파서블: 파이널 레코닝</p>
-          <span>
-            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
-              2025 · 미국
-            </span>
-            <br />
-            평균 <StarIcon src={star}></StarIcon> 3.7
-            <br />
-            예매율 30% · 누적 관객 159.5만명
-          </span>
-        </Rank>
-        <Rank>
-          <RankImg src={rank2_2}></RankImg>
-          <p style={{ marginBottom: "10px" }}>하이파이브</p>
-          <span>
-            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
-              2025 · 한국
-            </span>
-            <br />
-            예매율 20% · 누적 관객 493명
-          </span>
-        </Rank>
-        <Rank>
-          <RankImg src={rank2_3}></RankImg>
-          <p style={{ marginBottom: "10px" }}>소주전쟁</p>
-          <span>
-            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
-              2025 · 한국
-            </span>
-            <br />
-            예매율 15% · 누적 관객 268명
-          </span>
-        </Rank>
-        <Rank>
-          <RankImg src={rank2_4}></RankImg>
-          <p style={{ marginBottom: "10px" }}>드래곤 길들이기</p>
-          <span>
-            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
-              2025 · 미국
-            </span>
-            <br />
-            예매율 4.45
-          </span>
-        </Rank>
-        <Rank>
-          <RankImg src={rank2_5}></RankImg>
-          <p style={{ marginBottom: "10px" }}>릴로 & 스티치</p>
-          <span>
-            <span style={{ color: "#1E1E1E", fontSize: "14px" }}>
-              2025 · 미국
-            </span>
-            <br />
-            평균 <StarIcon src={star}></StarIcon> 3.5
-            <br />
-            예매율 4.1% · 누적 관객 12.4만명
-          </span>
-        </Rank>
+        <Rank2_1 />
+        <Rank2_2 />
+        <Rank2_3 />
+        <Rank2_4 />
+        <Rank2_5 />
       </ProgramList>
     </div>
   );
