@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/WATCHA_PEDIA_Logo_Black 1.svg";
 import styled from "styled-components";
 
@@ -35,20 +35,39 @@ const Dropdown = styled.select`
 `;
 
 const Footer = () => {
+  const [lang, setLang] = useState("ko");
+
   return (
     <div style={{ backgroundColor: "#000" }}>
       <p
         style={{
           color: "#fff",
           textAlign: "center",
+          paddingTop: "40px",
           paddingBottom: "15px",
-          paddingTop: "70px",
-          fontSize: "20px",
         }}
       >
-        지금까지{" "}
-        <span style={{ color: "#FF0558" }}>★ 777,777,777개의 평가가</span>{" "}
-        쌓였어요.
+        {lang === "ko" && (
+          <>
+            지금까지{" "}
+            <span style={{ color: "#FF0558" }}>★ 777,777,777개의 평가가</span>{" "}
+            쌓였어요.
+          </>
+        )}
+        {lang === "en" && (
+          <>
+            Until now,{" "}
+            <span style={{ color: "#FF0558" }}>★ 777,777,777 evaluations</span>{" "}
+            were submitted.
+          </>
+        )}
+        {lang === "jp" && (
+          <>
+            今まで{" "}
+            <span style={{ color: "#FF0558" }}>★ 777,777,777 犬の評価が </span>
+            積もりました。
+          </>
+        )}
       </p>
       <div
         style={{
@@ -89,10 +108,10 @@ const Footer = () => {
             </span>
           </p>
         </Info>
-        <Dropdown>
-          <option>한국어</option>
-          <option>English</option>
-          <option>日本語</option>
+        <Dropdown value={lang} onChange={(e) => setLang(e.target.value)}>
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="jp">日本語</option>
         </Dropdown>
       </div>
     </div>
