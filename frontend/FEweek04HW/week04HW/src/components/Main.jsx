@@ -21,6 +21,10 @@ import dday3 from "../assets/dday3.svg";
 import dday4 from "../assets/dday4.svg";
 import dday5 from "../assets/dday5.svg";
 import disney from "../assets/disney.svg";
+import mag1 from "../assets/magazine1.svg";
+import mag2 from "../assets/magazine2.svg";
+import mag3 from "../assets/magazine3.svg";
+import watcha from "../assets/WATCHA_icon_Circle.svg";
 import styled from "styled-components";
 
 const Img1 = styled.img`
@@ -91,6 +95,7 @@ const Rank = styled.div`
     font-size: 12px;
     font-weight: 400;
   }
+  cursor: pointer;
 `;
 
 const H3 = styled.h3`
@@ -141,12 +146,32 @@ const Dday = styled.div`
     font-weight: 400;
     padding-top: 10px;
   }
+  cursor: pointer;
 `;
 
 const OttImg = styled.img`
   width: 15px;
   margin-right: 5px;
   vertical-align: middle;
+`;
+
+const Magazine = styled.div`
+  span {
+    color: #7e7e7e;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  h3 {
+    font-size: 17px;
+    margin-bottom: 0px;
+  }
+  p {
+    color: #6a6a6a;
+    font-size: 15.5px;
+    font-weight: 400;
+    margin-top: 3px;
+  }
+  cursor: pointer;
 `;
 
 const Main = () => {
@@ -256,6 +281,48 @@ const Main = () => {
             극장 <span style={{ color: "#FF2F6E" }}>2025.05.28</span>
           </span>
         </Dday>
+      </ProgramList>
+      <RankName>
+        <H3>매거진</H3>
+        <span>
+          더보기
+          <img src={chevron} style={{ marginLeft: "5px" }} />
+        </span>
+      </RankName>
+      <ProgramList>
+        <Magazine>
+          <RankImg src={mag1}></RankImg>
+          <OttImg
+            src={watcha}
+            style={{ border: "1px solid #EEEEEE", borderRadius: "100%" }}
+          ></OttImg>
+          <span>아티클</span>
+          <h3>매번 세계를 구한 '에단 헌트'의 미션 연대기</h3>
+          <p>한눈에 보는 &lt;미션 임파서블&gt; 시리즈의 역대급 작전 리포트</p>
+        </Magazine>
+        <Magazine>
+          <RankImg src={mag2}></RankImg>
+          <OttImg
+            src={watcha}
+            style={{ border: "1px solid #EEEEEE", borderRadius: "100%" }}
+          ></OttImg>
+          <span>큐레이션</span>
+          <h3>제78회 칸영화제 화제작들의 기립박수 기록은?</h3>
+          <p>먼저 봐서 좋겠다... ⭐️</p>
+        </Magazine>
+        <Magazine>
+          <RankImg src={mag3}></RankImg>
+          <OttImg
+            src={watcha}
+            style={{ border: "1px solid #EEEEEE", borderRadius: "100%" }}
+          ></OttImg>
+          <span>아티클</span>
+          <h3>왓챠파티@무비랜드: 팀 크리에이티브</h3>
+          <p>
+            낯설지만 의미 있는 선택, &lt;퀸 크랩&gt;과 &lt;후아유&gt;로 본
+            왓챠의 감각 Part 2
+          </p>
+        </Magazine>
       </ProgramList>
     </div>
   );
