@@ -25,6 +25,9 @@ import mag1 from "../assets/magazine1.svg";
 import mag2 from "../assets/magazine2.svg";
 import mag3 from "../assets/magazine3.svg";
 import watcha from "../assets/WATCHA_icon_Circle.svg";
+import comment1 from "../assets/comment1.svg";
+import comment2 from "../assets/comment2.svg";
+import comment3 from "../assets/comment3.svg";
 import styled from "styled-components";
 
 const Img1 = styled.img`
@@ -156,6 +159,7 @@ const OttImg = styled.img`
 `;
 
 const Magazine = styled.div`
+  width: calc((100% - 2rem) / 3);
   span {
     color: #7e7e7e;
     font-size: 12px;
@@ -167,7 +171,7 @@ const Magazine = styled.div`
   }
   p {
     color: #6a6a6a;
-    font-size: 15.5px;
+    font-size: 14px;
     font-weight: 400;
     margin-top: 3px;
   }
@@ -323,6 +327,18 @@ const Main = () => {
             왓챠의 감각 Part 2
           </p>
         </Magazine>
+      </ProgramList>
+      <RankName>
+        <H3>지금 뜨는 코멘트</H3>
+        <span>
+          더보기
+          <img src={chevron} style={{ marginLeft: "5px" }} />
+        </span>
+      </RankName>
+      <ProgramList>
+        <RankImg src={comment1}></RankImg>
+        <RankImg src={comment2}></RankImg>
+        <RankImg src={comment3}></RankImg>
       </ProgramList>
     </div>
   );
