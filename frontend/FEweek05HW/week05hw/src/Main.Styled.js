@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const HeaderImage = styled.img`
   width: 20rem;
+  display: block;
+  margin: 0 auto;
 `;
 
 export const Container = styled.div`
@@ -17,6 +19,7 @@ export const H2 = styled.h2`
   font-weight: 800;
   margin-top: 0.2rem;
   margin-bottom: 0rem;
+  text-align: center;
 `;
 
 export const BeverageGrid = styled.div`
@@ -28,7 +31,7 @@ export const BeverageGrid = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 27rem;
+  width: 26rem;
   padding: 1.5rem;
   border-radius: 1.25rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -43,7 +46,7 @@ export const Card = styled.div`
 `;
 
 export const CardImage = styled.img`
-  width: 26.5rem;
+  width: 25rem;
   margin-bottom: 1.7rem;
 `;
 

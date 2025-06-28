@@ -18,8 +18,6 @@ const Coffee = () => {
   }, []);
   return (
     <S.Container>
-      <S.HeaderImage src="https://cdn.eyesmag.com/content/uploads/posts/2021/03/15/hollys-brand-renewal-01-39a756e8-a1dd-464d-8ad4-b5abd2236455.jpg" />
-      <S.H2>Coffee Menu</S.H2>
       <S.BeverageGrid>
         {coffees.map((coffee) => (
           <S.Card key={coffee.id}>

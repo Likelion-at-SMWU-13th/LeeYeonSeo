@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import * as S from "../Main.Styled";
 
 const NonCoffee = () => {
   const [nonCoffees, setNonCoffees] = useState([]);
@@ -16,24 +17,25 @@ const NonCoffee = () => {
       });
   }, []);
   return (
-    <div>
-      <h2>Non-Coffee Menu</h2>
-      <div>
+    <S.Container>
+      <S.BeverageGrid>
         {nonCoffees.map((nonCoffee) => (
-          <div key={nonCoffee.id}>
-            <h3>{nonCoffee.menu}</h3>
-            <img src={nonCoffee.image} alt={nonCoffee.menu} />
-            <p>칼로리: {nonCoffee.calorie}</p>
-            <p>당류: {nonCoffee.sugar}</p>
-            <p>단백질: {nonCoffee.protein}</p>
-            <p>포화지방: {nonCoffee.fat}</p>
-            <p>나트륨: {nonCoffee.natrium}</p>
-            <p>카페인: {nonCoffee.caffeine}</p>
-            <p>{nonCoffee.description}</p>
-          </div>
+          <S.Card key={nonCoffee.id}>
+            <S.Menu>{nonCoffee.menu}</S.Menu>
+            <S.CardImage src={nonCoffee.image} alt={nonCoffee.menu} />
+            <S.CardBody>
+              <S.P>칼로리: {nonCoffee.calorie}</S.P>
+              <S.P>당류: {nonCoffee.sugar}</S.P>
+              <S.P>단백질: {nonCoffee.protein}</S.P>
+              <S.P>포화지방: {nonCoffee.fat}</S.P>
+              <S.P>나트륨: {nonCoffee.natrium}</S.P>
+              <S.P>카페인: {nonCoffee.caffeine}</S.P>
+            </S.CardBody>
+            <S.CardDescription>{nonCoffee.description}</S.CardDescription>
+          </S.Card>
         ))}
-      </div>
-    </div>
+      </S.BeverageGrid>
+    </S.Container>
   );
 };
 
