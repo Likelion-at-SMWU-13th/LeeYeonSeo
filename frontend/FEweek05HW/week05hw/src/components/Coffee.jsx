@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import * as S from "../Main.Styled";
 
 const Coffee = () => {
   const [coffees, setCoffees] = useState([]);
@@ -16,27 +17,27 @@ const Coffee = () => {
       });
   }, []);
   return (
-    <div>
-      <h1>Hollys Coffee</h1>
-      <h2>Coffee Menu</h2>
-      <div>
+    <S.Container>
+      <S.HeaderImage src="https://cdn.eyesmag.com/content/uploads/posts/2021/03/15/hollys-brand-renewal-01-39a756e8-a1dd-464d-8ad4-b5abd2236455.jpg" />
+      <S.H2>Coffee Menu</S.H2>
+      <S.BeverageGrid>
         {coffees.map((coffee) => (
-          <div key={coffee.id}>
-            <div>
-              <h3>{coffee.menu}</h3>
-              <img src={coffee.image} alt={coffee.menu} />
-              <p>칼로리: {coffee.calorie}</p>
-              <p>당류: {coffee.sugar}</p>
-              <p>단백질: {coffee.protein}</p>
-              <p>포화지방: {coffee.fat}</p>
-              <p>나트륨: {coffee.natrium}</p>
-              <p>카페인: {coffee.caffeine}</p>
-              <p>{coffee.description}</p>
-            </div>
-          </div>
+          <S.Card key={coffee.id}>
+            <S.Menu>{coffee.menu}</S.Menu>
+            <S.CardImage src={coffee.image} alt={coffee.menu} />
+            <S.CardBody>
+              <S.P>칼로리: {coffee.calorie}</S.P>
+              <S.P>당류: {coffee.sugar}</S.P>
+              <S.P>단백질: {coffee.protein}</S.P>
+              <S.P>포화지방: {coffee.fat}</S.P>
+              <S.P>나트륨: {coffee.natrium}</S.P>
+              <S.P>카페인: {coffee.caffeine}</S.P>
+            </S.CardBody>
+            <S.CardDescription>{coffee.description}</S.CardDescription>
+          </S.Card>
         ))}
-      </div>
-    </div>
+      </S.BeverageGrid>
+    </S.Container>
   );
 };
 
