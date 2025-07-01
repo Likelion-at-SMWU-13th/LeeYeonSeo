@@ -1,12 +1,7 @@
-import { useState, useRef, useCallback } from "react"; // ① useRef import 하기
+import { Link } from "react-router-dom";
+import { useQuiz } from "../hooks/useQuiz"; // ① useRef import 하기
 
 const QuizApp = () => {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [userAnswer, setUserAnswer] = useState("");
-  const [answers, setAnswers] = useState([]);
-  // ② inputRef 객체로 useRef( ) 생성
-  const inputRef = useRef(null);
-
   const questions = [
     { question: "React에서 상태를 관리하는 Hook은?", answer: "useState" },
     {
@@ -16,27 +11,15 @@ const QuizApp = () => {
     { question: "DOM에 직접 접근할 때 사용하는 Hook은?", answer: "useRef" },
   ];
 
-  const handleSubmit = useCallback(() => {
-    const newAnswers = [...answers];
-    newAnswers[currentQuestion] = userAnswer;
-    setAnswers(newAnswers);
-
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion((prev) => prev + 1);
-      setUserAnswer("");
-      setTimeout(() => inputRef.current?.focus(), 0);
-    }
-  }, [currentQuestion, userAnswer, answers, questions.length]);
-
-  const handleReset = useCallback(() => {
-    setCurrentQuestion(0);
-    setUserAnswer("");
-    setAnswers([]);
-    // ④-2. input 내용 지우기
-    inputRef.current.value = "";
-    // ④-3. input에 포커스 하기
-    inputRef.current.focus();
-  }, []);
+  const {
+    currentQuestion,
+    userAnswer,
+    setUserAnswer,
+    answers,
+    inputRef,
+    handleSubmit,
+    handleReset,
+  } = useQuiz(questions);
 
   return (
     <div className="quiz-container">
@@ -54,9 +37,15 @@ const QuizApp = () => {
           className="answer-input"
         />
         <div className="button-group">
-          <button onClick={handleSubmit} className="submit-btn">
-            {currentQuestion < questions.length - 1 ? "다음 문제" : "완료"}
-          </button>
+          {currentQuestion < questions.length - 1 ? (
+            <button onClick={handleSubmit} className="submit-btn">
+              {currentQuestion < questions.length - 1 ? "다음 문제" : "완료"}
+            </button>
+          ) : (
+            <Link to="/result" className="link-btn">
+              결과보기
+            </Link>
+          )}
           <button onClick={handleReset} className="reset-btn">
             초기화
           </button>
