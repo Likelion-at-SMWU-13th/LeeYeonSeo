@@ -1,20 +1,22 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 import "./App.css";
 import QuizApp from "./pages/QuizPage";
 import ResultPage from "./pages/ResultPage";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
-      <div className="app">
-        <Routes>
-          <Route path="/" element={<QuizApp />} />
-          <Route path="/result" element={<ResultPage />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<QuizApp />} />
+          <Route path="quiz/:quizId" element={<QuizApp />} />
+          <Route path="result" element={<ResultPage />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
