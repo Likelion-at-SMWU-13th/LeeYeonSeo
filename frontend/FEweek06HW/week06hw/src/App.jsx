@@ -1,15 +1,16 @@
-import React from "react";
-import CoffeeMenu from "./pages/CoffeeMenu";
-import CoolMenu from "./pages/CoolMenu";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import FirstPage from "./pages/FirstPage";
 import "./App.css";
-import * as S from "./Main.Styled";
 
 function App() {
   return (
-    <>
-      <CoffeeMenu />
-      <CoolMenu />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<FirstPage />}></Route>
+        <Route path="/:menu" element={<Layout />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
