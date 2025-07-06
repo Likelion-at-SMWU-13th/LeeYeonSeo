@@ -36,14 +36,22 @@ const Layout = () => {
             <Menu ref={nonCoffeeRef} menu={"Non-Coffee"} />
             <NonCoffee></NonCoffee>
           </div>
-          <Link to="/cool">여름 추천 메뉴 보러가기</Link>
+          <div className="location">
+            <Link to="/cool" className="link-btn">
+              여름 추천 메뉴 보러가기
+            </Link>
+          </div>
         </>
       )}
       {menu === "cool" && (
         <>
           <Menu menu={"Cool"} />
           <Cool />
-          <Link to="/coffee">기본 메뉴 보러가기</Link>
+          <div className="location">
+            <Link to="/coffee" className="link-btn">
+              기본 메뉴 보러가기
+            </Link>
+          </div>
         </>
       )}
     </div>
