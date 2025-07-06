@@ -31,11 +31,11 @@ export const BeverageGrid = styled.div`
 `;
 
 export const Card = styled.div`
-  width: 26rem;
+  width: 30%;
+  min-width: 26rem;
   padding: 1.5rem;
   border-radius: 1.25rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
@@ -65,7 +65,7 @@ export const CardBody = styled.div`
   grid-template-rows: repeat(1, auto);
   gap: 0.4rem;
   align-items: center;
-  justify-contents: center;
+  justify-content: center;
   padding-left: 4.5rem;
 `;
 
@@ -83,7 +83,29 @@ export const CardDescription = styled.div`
   font-weight: 700;
   font-size: 1.2rem;
   align-items: center;
-  justify-contents: center;
+  justify-content: center;
   text-align: center;
   padding-bottom: 0.7rem;
+`;
+
+export const ScrollBtn = styled.button`
+  width: 20rem;
+  height: 3.5rem;
+  background-color: #d91425;
+  border: #d91425;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 25rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+`;
+
+export const ButtonDiv = styled.div`
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
