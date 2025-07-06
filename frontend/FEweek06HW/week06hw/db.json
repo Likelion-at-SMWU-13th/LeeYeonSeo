@@ -431,5 +431,187 @@
       "caffeine": "23mg",
       "description": "고소한 우유에 화이트 초콜릿 플레이버가\n 더해진 달콤한 음료"
     }
+  ],
+  "coolMenus": [
+    {
+      "id": 1,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202506260308068200.png",
+      "menu": "팥 듬뿍 컵빙수",
+      "calorie": "507kcal",
+      "sugar": "61g(61%)",
+      "protein": "11g(20%)",
+      "fat": "5.2g(35%)",
+      "natrium": "253mg(13%)",
+      "caffeine": "-",
+      "description": "부드러운 우유얼음에 국내산 팥,\n쫀득한 찹쌀떡이 어우러진 전통 빙수"
+    },
+    {
+      "id": 2,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202506260308581840.png",
+      "menu": "애플망고 듬뿍 컵빙수",
+      "calorie": "339kcal",
+      "sugar": "45g(45%)",
+      "protein": "7g(13%)",
+      "fat": "5.4g(36%)",
+      "natrium": "170mg(8%)",
+      "caffeine": "-",
+      "description": "상큼한 망고가 한가득!\n시원함 그 자체 망고빙수"
+    },
+    {
+      "id": 3,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202506260309114400.png",
+      "menu": "딸기베리듬뿍 컵빙수",
+      "calorie": "330kcal",
+      "sugar": "49g(49%)",
+      "protein": "6g(11%)",
+      "fat": "5.2g(35%)",
+      "natrium": "130mg(6%)",
+      "caffeine": "-",
+      "description": "빨간맛 궁금해 허니♥\n딸기와 블루베리 가득 올라간 딸기베리 빙수"
+    },
+    {
+      "id": 4,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202505120442282950.png",
+      "menu": "팥 듬뿍 빙수",
+      "calorie": "439kcal",
+      "sugar": "54g(54%)",
+      "protein": "10g(18%)",
+      "fat": "4.3g(28%)",
+      "natrium": "230mg(12%)",
+      "caffeine": "-",
+      "description": "부드러운 우유얼음에 국내산 팥,\n쫀득한 찹쌀떡이 어우러진 전통 빙수"
+    },
+    {
+      "id": 5,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202505120445477210.png",
+      "menu": "애플망고 듬뿍 빙수",
+      "calorie": "334kcal",
+      "sugar": "44g(44%)",
+      "protein": "7g(13%)",
+      "fat": "5.4g(36%)",
+      "natrium": "168mg(8%)",
+      "caffeine": "-",
+      "description": "상큼한 망고가 한가득! 시원함 그 자체 망고빙수"
+    },
+    {
+      "id": 6,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202505120447437910.png",
+      "menu": "딸기베리 듬뿍 빙수",
+      "calorie": "324kcal",
+      "sugar": "48g(48%)",
+      "protein": "6g(11%)",
+      "fat": "5.1g(34%)",
+      "natrium": "127mg(6%)",
+      "caffeine": "-",
+      "description": "빨간맛 궁금해 허니♥\n딸기와 블루베리 가득 올라간 딸기베리 빙수"
+    },
+    {
+      "id": 7,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202505120346218220.png",
+      "menu": "망고 코코 할리치노",
+      "calorie": "454kcal",
+      "sugar": "70g(70%)",
+      "protein": "7g(12%)",
+      "fat": "10.5g(70%)",
+      "natrium": "180mg(9%)",
+      "caffeine": "-",
+      "description": "부드러운 코코넛 스무디에 달콤한 망고 과육 듬뿍!"
+    },
+    {
+      "id": 8,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202504220414597990.png",
+      "menu": "헤이즐넛 초코칩 할리치노",
+      "calorie": "452kcal",
+      "sugar": "51g(51%)",
+      "protein": "9g(16%)",
+      "fat": "14.2g(95%)",
+      "natrium": "202mg(10%)",
+      "caffeine": "3mg",
+      "description": "다크 초콜릿과 헤이즐넛이 어우러져 달달함 가득한 초콜릿 할리치노"
+    },
+    {
+      "id": 9,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202504220418333670.png",
+      "menu": "콜드브루 모카 할리치노",
+      "calorie": "323kcal",
+      "sugar": "37g(37%)",
+      "protein": "6g(11%)",
+      "fat": "10.2g(68%)",
+      "natrium": "176mg(9%)",
+      "caffeine": "137mg",
+      "description": "콜드브루와 모카가 만나 풍미 가득한 커피 할리치노"
+    },
+    {
+      "id": 10,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202504220415448230.png",
+      "menu": "제주 말차 할리치노",
+      "calorie": "426kcal",
+      "sugar": "61g(61%)",
+      "protein": "8g(14%)",
+      "fat": "8.1g(54%)",
+      "natrium": "112mg(6%)",
+      "caffeine": "194mg",
+      "description": "제주산 말차 파우더로 만들어 깊고 진한 말차 본연의 풍미를 살린 할리치노\n*'고카페인 함유' 제품으로 어린이, 임신부, 카페인 민감자는 섭취에 주의하여 주시기 바랍니다"
+    },
+    {
+      "id": 10,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202504220415448230.png",
+      "menu": "제주 말차 할리치노",
+      "calorie": "426kcal",
+      "sugar": "61g(61%)",
+      "protein": "8g(14%)",
+      "fat": "8.1g(54%)",
+      "natrium": "112mg(6%)",
+      "caffeine": "194mg",
+      "description": "제주산 말차 파우더로 만들어 깊고 진한 말차 본연의 풍미를 살린 할리치노\n*'고카페인 함유' 제품으로 어린이, 임신부, 카페인 민감자는 섭취에 주의하여 주시기 바랍니다"
+    },
+    {
+      "id": 11,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202504220418587630.png",
+      "menu": "콜드브루 할리치노",
+      "calorie": "264kcal",
+      "sugar": "35g(35%)",
+      "protein": "5g(9%)",
+      "fat": "7.5g(50%)",
+      "natrium": "182mg(9%)",
+      "caffeine": "91mg",
+      "description": "콜드브루와 우유, 얼음이 갈린 할리치노\n*'고카페인 함유' 제품으로 어린이, 임신부, 카페인 민감자는 섭취에 주의하여 주시기 바랍니다"
+    },
+    {
+      "id": 12,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202504220417162450.png",
+      "menu": "민트 초코칩 할리치노",
+      "calorie": "438kcal",
+      "sugar": "57g(57%)",
+      "protein": "7g(12%)",
+      "fat": "12.8g(85%)",
+      "natrium": "227mg(11%)",
+      "caffeine": "3mg",
+      "description": "초코칩이 콕콕 박힌 상쾌하면서 청량한 민트 맛의 블렌디드 음료"
+    },
+    {
+      "id": 13,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202504220417322650.png",
+      "menu": "딸기 치즈케익 할리치노",
+      "calorie": "415kcal",
+      "sugar": "59g(59%)",
+      "protein": "5g(10%)",
+      "fat": "10.2g(68%)",
+      "natrium": "166mg(8%)",
+      "caffeine": "-",
+      "description": "치즈케익맛 아이스블렌디드 음료에 상큼한 딸기를 토핑한 할리스 시그니처 메뉴"
+    },
+    {
+      "id": 14,
+      "image": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202504220418490810.png",
+      "menu": "플레인 요거트 할리치노",
+      "calorie": "292kcal",
+      "sugar": "58g(58%)",
+      "protein": "7g(13%)",
+      "fat": "0.9g(6%)",
+      "natrium": "202mg(10%)",
+      "caffeine": "-",
+      "description": "상큼한 요거트 맛을 그대로 느낄 수 있는 플레인 요거트 할리치노"
+    }
   ]
 }
