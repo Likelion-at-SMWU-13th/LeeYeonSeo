@@ -1,0 +1,23 @@
+.link-btn {
+  display: flex;
+  padding: 1rem 1.75rem;
+  background-color: #ff4d4d;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 25rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-decoration: none;
+}
+
+.location {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5rem;
+}
