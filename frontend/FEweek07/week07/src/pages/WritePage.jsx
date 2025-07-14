@@ -19,7 +19,7 @@ const WritePage = () => {
 
   const postComment = () => {
     axios
-      .post(`{${baseURL}/entries/}`, {
+      .post(`${baseURL}/entries/`, {
         author: author,
         comment: comment,
       })
