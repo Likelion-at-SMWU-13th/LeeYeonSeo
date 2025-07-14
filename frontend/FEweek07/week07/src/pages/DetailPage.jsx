@@ -8,10 +8,11 @@ const DetailPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [detail, setDetail] = useState([]);
+  const baseURL = import.meta.env.VITE_API_BASE_URL;
 
   const getDetail = (id) => {
     axios
-      .get(`http://127.0.0.1:8000/entries/${id}/`)
+      .get(`${baseURL}/entries/${id}/`)
       .then((response) => {
         console.log(response);
         setDetail(response.data);

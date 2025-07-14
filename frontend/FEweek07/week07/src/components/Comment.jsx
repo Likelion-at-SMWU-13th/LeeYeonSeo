@@ -6,10 +6,11 @@ import styled from "styled-components";
 const Comment = () => {
   const navigate = useNavigate();
   const [comments, setComments] = useState([]);
+  const baseURL = import.meta.env.VITE_API_BASE_URL;
 
   const getComment = () => {
     axios
-      .get("http://127.0.0.1:8000/entries/")
+      .get(`${baseURL}/entries/`)
       .then((response) => {
         console.log(response);
         setComments(response.data.reverse());
