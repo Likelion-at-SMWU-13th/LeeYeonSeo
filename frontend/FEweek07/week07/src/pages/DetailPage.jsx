@@ -8,6 +8,11 @@ const DetailPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const baseURL = import.meta.env.VITE_API_BASE_URL;
+  const [comment, setComment] = useState("");
+
+  const onChangeComment = (e) => {
+    setComment(e.target.value);
+  };
 
   const [detail, setDetail] = useState([]);
   const getDetail = (id) => {
@@ -34,19 +39,39 @@ const DetailPage = () => {
         alert("게시글을 삭제하지 못했습니다.");
       });
   };
+  const changeComment = () => {
+    axios
+      .put(`${baseURL}/entries/${id}/`, {
+        author: detail.author,
+        comment: comment,
+      })
+      .then((response) => {
+        console.log(response);
+        alert("게시글 수정이 완료되었습니다.");
+        navigate("/");
+      });
+  };
 
   useEffect(() => {
     getDetail(id);
   }, [id]);
+
+  useEffect(() => {
+    if (detail) {
+      setComment(detail.comment || "");
+    }
+  }, [detail]);
   return (
     <Wrapper>
       <Button txt="게시글 작성하기" onBtnClick={() => navigate("/write")} />
       <DetailWrapper>
         <Author>{detail.author}</Author>
         <Time>{detail.timestamp}</Time>
-        <Comment>{detail.comment}</Comment>
+        <FormGroup>
+          <StyledTxtarea value={comment} onChange={onChangeComment} />
+        </FormGroup>
         <BtnWrapper>
-          <Button txt="수정" fontSize="1.875rem" />
+          <Button txt="수정" onBtnClick={changeComment} fontSize="1.875rem" />
           <Button txt="삭제" onBtnClick={deleteComment} fontSize="1.875rem" />
         </BtnWrapper>
       </DetailWrapper>
@@ -98,4 +123,29 @@ const BtnWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
+`;
+
+const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+`;
+
+const StyledTxtarea = styled.textarea`
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 12.5rem;
+  background-color: white;
+  padding: 1.875rem;
+  border-radius: 0.9375rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 3.125rem 0;
+  resize: none;
+  color: var(--text-black);
+  &::placeholder {
+    color: #acacac;
+    font-weight: 700;
+  }
 `;
