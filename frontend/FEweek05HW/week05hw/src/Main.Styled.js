@@ -37,7 +37,7 @@ export const Card = styled.div`
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   align-items: center;
-  justify-contents: center;
+  justify-content: center;
   transition: transform 0.3s ease-in-out;
 
   &:hover {
@@ -62,7 +62,7 @@ export const Menu = styled.h3`
 export const CardBody = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: reapeat(1, auto);
+  grid-template-rows: repeat(1, auto);
   gap: 0.4rem;
   align-items: center;
   justify-contents: center;

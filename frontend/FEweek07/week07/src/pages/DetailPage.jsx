@@ -49,6 +49,10 @@ const DetailPage = () => {
         console.log(response);
         alert("게시글 수정이 완료되었습니다.");
         navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("게시글을 수정하지 못했습니다.");
       });
   };
 
