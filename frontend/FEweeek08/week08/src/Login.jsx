@@ -11,7 +11,7 @@ const Login = () => {
     window.location.href = authServerLink;
   };
   return (
-    <div>
+    <div className="login-box">
       <h2>로그인</h2>
       <div className="btns-container">
         <button onClick={handleKakao}>
