@@ -10,7 +10,8 @@ const Redirection = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // 사전에 설정한 REST API 키와 Redirect URI, Authorization Code 값을 쿼리 파라미터로 싣고 Access Token을 요청
+    // 사전에 설정한 REST API 키와 Redirect URI, Authorization Code 값 등을 쿼리 파라미터로 싣고 Access Token을 요청
+    // +) 요청 시 4가지의 쿼리 파라미터가 필수적으로 필요함(grant_type, client_id, redirect_uri, code)
     fetch(
       `https://kauth.kakao.com/oauth/token?grant_type=${grant_type}&client_id=${
         import.meta.env.VITE_REST_API_KEY
