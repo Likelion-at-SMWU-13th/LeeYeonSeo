@@ -1,12 +1,13 @@
 import CatCard from "./CatCard.jsx";
+import * as S from "./styled.js";
 const CatContainer = ({ title }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <div>
+    <S.Container>
+      <S.H1>{title}</S.H1>
+      <S.Wrapper>
         <CatCard />
-      </div>
-    </div>
+      </S.Wrapper>
+    </S.Container>
   );
 };
 

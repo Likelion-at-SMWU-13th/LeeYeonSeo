@@ -4,7 +4,7 @@ import CatContainer from "./components/CatContainer.jsx";
 function App() {
   return (
     <>
-      <CatContainer title={"CAT SAVE THE WORLD!!"} />
+      <CatContainer title={"😽 CAT SAVE THE WORLD!! 😻"} />
     </>
   );
 }
