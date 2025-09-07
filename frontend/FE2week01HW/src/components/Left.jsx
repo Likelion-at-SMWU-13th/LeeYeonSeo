@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { usePart } from "../contexts/MemberContext";
 
 const Left = () => {
-  const { changePart } = usePart();
+  const { selectPart } = usePart();
 
   return (
     <Wrapper>
-      <button onClick={() => changePart("프론트엔드")}>프론트엔드</button>
-      <button onClick={() => changePart("백엔드")}>백엔드</button>
-      <button onClick={() => changePart("기획/디자인")}>기획/디자인</button>
+      <button onClick={() => selectPart("프론트엔드")}>프론트엔드</button>
+      <button onClick={() => selectPart("백엔드")}>백엔드</button>
+      <button onClick={() => selectPart("기획/디자인")}>기획/디자인</button>
     </Wrapper>
   );
 };
