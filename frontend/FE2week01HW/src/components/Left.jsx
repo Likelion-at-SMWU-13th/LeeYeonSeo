@@ -3,13 +3,50 @@ import styled from "styled-components";
 import { usePart } from "../contexts/MemberContext";
 
 const Left = () => {
-  const { selectPart } = usePart();
+  const { part, selectPart } = usePart();
 
   return (
     <Wrapper>
-      <button onClick={() => selectPart("프론트엔드")}>프론트엔드</button>
-      <button onClick={() => selectPart("백엔드")}>백엔드</button>
-      <button onClick={() => selectPart("기획/디자인")}>기획/디자인</button>
+      <button
+        style={{
+          backgroundColor: part === "프론트엔드" ? "#ffe5c5" : "white",
+          borderColor: part === "프론트엔드" ? "#ee7521" : "black",
+          color: part === "프론트엔드" ? "#7f3700" : "black",
+        }}
+        onClick={() => selectPart("프론트엔드")}
+      >
+        프론트엔드
+      </button>
+      <button
+        style={{
+          backgroundColor: part === "백엔드" ? "#ffe5c5" : "white",
+          borderColor: part === "백엔드" ? "#ee7521" : "black",
+          color: part === "백엔드" ? "#7f3700" : "black",
+        }}
+        onClick={() => selectPart("백엔드")}
+      >
+        백엔드
+      </button>
+      <button
+        style={{
+          backgroundColor: part === "기획/디자인" ? "#ffe5c5" : "white",
+          borderColor: part === "기획/디자인" ? "#ee7521" : "black",
+          color: part === "기획/디자인" ? "#7f3700" : "black",
+        }}
+        onClick={() => selectPart("기획/디자인")}
+      >
+        기획/디자인
+      </button>
+      <button
+        style={{
+          backgroundColor: part === "" ? "#ffe5c5" : "white",
+          borderColor: part === "" ? "#ee7521" : "black",
+          color: part === "" ? "#7f3700" : "black",
+        }}
+        onClick={() => selectPart("")}
+      >
+        전체
+      </button>
     </Wrapper>
   );
 };
@@ -33,5 +70,6 @@ const Wrapper = styled.div`
     margin-top: 20px;
     background-color: white;
     cursor: pointer;
+    border: 1.5px solid black;
   }
 `;
