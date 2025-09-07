@@ -9,6 +9,16 @@ const Left = () => {
     <Wrapper>
       <button
         style={{
+          backgroundColor: part === "" ? "#ffe5c5" : "white",
+          borderColor: part === "" ? "#ee7521" : "black",
+          color: part === "" ? "#7f3700" : "black",
+        }}
+        onClick={() => selectPart("")}
+      >
+        전체
+      </button>
+      <button
+        style={{
           backgroundColor: part === "프론트엔드" ? "#ffe5c5" : "white",
           borderColor: part === "프론트엔드" ? "#ee7521" : "black",
           color: part === "프론트엔드" ? "#7f3700" : "black",
@@ -36,16 +46,6 @@ const Left = () => {
         onClick={() => selectPart("기획/디자인")}
       >
         기획/디자인
-      </button>
-      <button
-        style={{
-          backgroundColor: part === "" ? "#ffe5c5" : "white",
-          borderColor: part === "" ? "#ee7521" : "black",
-          color: part === "" ? "#7f3700" : "black",
-        }}
-        onClick={() => selectPart("")}
-      >
-        전체
       </button>
     </Wrapper>
   );

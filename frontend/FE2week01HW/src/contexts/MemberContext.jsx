@@ -1,13 +1,13 @@
-import React, { createContext, useCallback, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const MemberContext = createContext();
 
 export const MemberProvider = ({ children }) => {
   const [part, setPart] = useState("");
 
-  const selectPart = useCallback((nextPart) => {
+  const selectPart = (nextPart) => {
     setPart(nextPart);
-  }, []);
+  };
   return (
     <div>
       <MemberContext.Provider value={{ part, selectPart }}>
