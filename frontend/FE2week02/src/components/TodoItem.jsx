@@ -14,9 +14,10 @@ function TodoItem({ todo }) {
           checked={todo.completed}
           onChange={() => toggleTodo(todo.id)}
         />
+        <span />
       </S.Check>
 
-      <S.ItemTitle className='todo.completed ? "done" ? ""'>
+      <S.ItemTitle className={todo.completed ? "done" : ""}>
         {todo.title}
       </S.ItemTitle>
 
