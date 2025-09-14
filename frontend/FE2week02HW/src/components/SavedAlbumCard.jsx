@@ -10,22 +10,26 @@ function SavedAlbumCard({ album }) {
 
   return (
     <div>
-      <img src={album.image} />
+      <S.ImgWrapper>
+        <S.Img2 src={album.image} />
+        <S.Button onClick={() => removeAlbum(album.id)}>
+          <TiDelete size="18px" fill="#fe6969" />
+        </S.Button>
+      </S.ImgWrapper>
       <p>{album.name}</p>
       <p>{album.artists}</p>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", flex: "row" }}>
         <div>
           {album.albumType}/{album.releaseDate}/
         </div>
         <a href={album.externalUrl}>바로가기</a>
+        <div>
+          <FaBookmark
+            fill={album.marked ? "#ffa012" : "#e9e9e9"}
+            onClick={() => toggleAlbum(album.id)}
+          />
+        </div>
       </div>
-      <FaBookmark
-        fill={album.marked ? "#ffa012" : "#e9e9e9"}
-        onClick={() => toggleAlbum(album.id)}
-      />
-      <button onClick={() => removeAlbum(album.id)}>
-        <TiDelete />
-      </button>
     </div>
   );
 }

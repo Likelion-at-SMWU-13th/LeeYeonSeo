@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { useAlbumStore } from "../store/store";
-import { MdAdd } from "react-icons/md";
-import { FaBookmark } from "react-icons/fa";
 import AlbumCard from "../components/AlbumCard";
 import SavedAlbumCard from "../components/SavedAlbumCard";
+import * as S from "../styles/styled";
 
 const AlbumList = () => {
   const albums = useAlbumStore((s) => s.albums);
@@ -16,28 +15,37 @@ const AlbumList = () => {
 
   return (
     <div>
-      {albums.length === 0 ? (
-        <p>로딩중</p>
-      ) : (
-        <div>
+      <S.GlobalStyle />
+      <S.Page>
+        {albums.length === 0 ? (
+          <p>로딩중</p>
+        ) : (
           <div>
-            <h2>My Album List</h2>
-            {savedAlbums.length === 0 ? (
-              <p>앨범리스트가 비어있어요! 듣고 싶은 앨범을 선택해주세요</p>
-            ) : (
-              savedAlbums.map((album) => (
-                <SavedAlbumCard key={album.id} album={album} />
-              ))
-            )}
+            <div>
+              <h2>My Album List</h2>
+              {savedAlbums.length === 0 ? (
+                <S.Empty>
+                  앨범리스트가 비어있어요! 듣고 싶은 앨범을 선택해주세요
+                </S.Empty>
+              ) : (
+                <S.SavedGrid>
+                  {savedAlbums.map((album) => (
+                    <SavedAlbumCard key={album.id} album={album} />
+                  ))}
+                </S.SavedGrid>
+              )}
+            </div>
+            <div>
+              <h2>New Releases</h2>
+              <S.AlbumGrid>
+                {albums.map((album) => (
+                  <AlbumCard key={album.id} album={album} />
+                ))}
+              </S.AlbumGrid>
+            </div>
           </div>
-          <div>
-            <h2>New Releases</h2>
-            {albums.map((album) => (
-              <AlbumCard key={album.id} album={album} />
-            ))}
-          </div>
-        </div>
-      )}
+        )}
+      </S.Page>
     </div>
   );
 };
