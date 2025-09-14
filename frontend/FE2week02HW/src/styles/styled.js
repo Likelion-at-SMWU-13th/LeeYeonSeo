@@ -63,7 +63,7 @@ export const ImgWrapper = styled.div`
 
 export const SavedGrid = styled.div`
   display: flex;
-  gap: 3px;
+  gap: 20px;
 `;
 
 export const Name = styled.h1`
@@ -92,7 +92,7 @@ export const CardBottomWrapper = styled.div`
 `;
 
 export const CardWrapper1 = styled.div`
-  padding: 30px 20px;
+  padding: 20px 20px 10px 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -104,4 +104,19 @@ export const CardWrapper1 = styled.div`
 export const A = styled.a`
   color: #1fba00ff;
   text-decoration: none;
+`;
+
+export const SavedName = styled.h3`
+  color: #3e3e3eff;
+  font-size: 0.75rem;
+  margin-right: 10px;
+  margin-bottom: 0px;
+`;
+
+export const SavedArtist = styled.h5`
+  color: #7e7e7eff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 5px;
 `;
