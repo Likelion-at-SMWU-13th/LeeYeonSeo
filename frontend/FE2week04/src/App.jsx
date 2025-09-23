@@ -1,7 +1,7 @@
 import "./App.css";
 
 function App() {
-  return <></>;
+  return <>tanstack query 실습!</>;
 }
 
 export default App;
