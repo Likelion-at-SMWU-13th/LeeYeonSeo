@@ -20,3 +20,16 @@ export const useReasUser = (userId) => {
     retry: 3, // 실패 시 최대 3번까지 재시도
   });
 };
+
+export const useUpdateUser = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({ userId, username, password }) => {
+      return updateUser(userId, { username, password });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["users"] }); // 정보 수정 후 invalidateQueries를 사용하여 마이페이지 데이터 새로고침
+    },
+  });
+};
