@@ -33,3 +33,19 @@ export const useUpdateUser = () => {
     },
   });
 };
+
+export const useDeleteUser = () => {
+  const queryClient = useQueryClient({
+    defaultQueryOptions: {
+      queries: { gcTime: 10 * 60 * 1000 }, // 삭제 후 사용자 정보가 다시 필요할 경우를 대비해 캐시를 10분 동안 보관
+    },
+  });
+
+  return useMutation({
+    mutationFn: (userId) => deleteUser(userId),
+    onSuccess: () => {
+      alert("성공적으로 삭제되었습니다"); // 삭제 성공 시 "성공적으로 삭제되었습니다" 알림
+      queryClient.invalidateQueries(["users"]); // 관련된 모든 캐시 무효화
+    },
+  });
+};
