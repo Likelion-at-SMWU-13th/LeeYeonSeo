@@ -36,7 +36,7 @@ export const useUpdateUser = () => {
 
 export const useDeleteUser = () => {
   const queryClient = useQueryClient({
-    defaultQueryOptions: {
+    defaultOptions: {
       queries: { gcTime: 10 * 60 * 1000 }, // 삭제 후 사용자 정보가 다시 필요할 경우를 대비해 캐시를 10분 동안 보관
     },
   });
