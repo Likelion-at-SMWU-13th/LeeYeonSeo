@@ -36,38 +36,34 @@ function App() {
     ott: "Tving, Netflix, Watcha, Wavve",
   };
 
-  useEffect(() => {
+  function printConsole(drama: favoriteDrama): void {
     console.log(
       "최근 제가 제일 좋아는 드라마는 " +
-        myFavoriteDrama.nation +
+        drama.nation +
         "드라마인 " +
-        myFavoriteDrama.title +
+        drama.title +
         "입니다!"
     );
     console.log(
-      "이 작품의 주연은 " +
-        myFavoriteDrama.actor +
-        "과 " +
-        myFavoriteDrama.actress +
-        "입니다."
+      "이 작품의 주연은 " + drama.actor + "과 " + drama.actress + "입니다."
     );
-    if (myFavoriteDrama.romance) {
+    if (drama.romance) {
       console.log("이 작품의 장르는 로맨스 입니다 ♥︎ !!");
     } else {
       console.log("이 작품에는 로맨스 장면이 들어가지 않습니다..");
     }
-    console.log("줄거리: " + myFavoriteDrama.summary);
-    console.log(
-      "저의 평점은... " + myFavoriteDrama.rating + "점 입니다!!!! 🤭"
-    );
+    console.log("줄거리: " + drama.summary);
+    console.log("저의 평점은... " + drama.rating + "점 입니다!!!! 🤭");
     console.log(
       "저는 벌써 이 드라마를 " +
-        myFavoriteDrama.rewatchCount +
+        drama.rewatchCount +
         "번이나 봤을 정도로.. 너무너무 좋아하는 드라마입니다.. ♥︎"
     );
-    console.log(
-      "이 작품은 " + myFavoriteDrama.ott + "에서 감상하실 수 있답니다!~"
-    );
+    console.log("이 작품은 " + drama.ott + "에서 감상하실 수 있답니다!~");
+  }
+
+  useEffect(() => {
+    printConsole(myFavoriteDrama);
   }, []);
 
   return (
