@@ -74,14 +74,30 @@ function App() {
         justifyContent: "center",
         alignContent: "center",
         alignItems: "center",
+        color: "#182230",
       }}
     >
-      <h1>멋사 2학기 5주차 과제 - 좋아하는 것 소개하기!</h1>
+      <h1 style={{ color: "rgb(255, 163, 58)" }}>
+        🦁 멋사 2학기 5주차 과제 🦁
+      </h1>
+      <h2 style={{ marginTop: "0px" }}>
+        나의 <span style={{ color: "#74a1e0" }}>최애 드라마</span> 소개하기!!
+      </h2>
       <p>
-        제가 <strong>좋아하는 드라마</strong>가 궁금하시다면.. 콘솔창을
-        확인해주세요! ♥︎
+        제가{" "}
+        <strong style={{ color: "rgb(116, 161, 224)" }}>좋아하는 드라마</strong>
+        가 궁금하시다면.. 콘솔창을 확인해주세요!{" "}
+        <span style={{ color: "#74a1e0" }}>♥︎</span>
       </p>
-      <img style={{ borderRadius: "20px", width: "400px" }} src={HiddenLove} />
+      <img
+        style={{
+          borderRadius: "20px",
+          width: "370px",
+          boxShadow: "0 0 30px 10px rgba(116, 161, 224, 0.2)",
+          marginTop: "20px",
+        }}
+        src={HiddenLove}
+      />
     </div>
   );
 }
