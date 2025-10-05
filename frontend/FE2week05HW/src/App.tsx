@@ -42,7 +42,7 @@ function App() {
         myFavoriteDrama.nation +
         "드라마인 " +
         myFavoriteDrama.title +
-        "입니다."
+        "입니다!"
     );
     console.log(
       "이 작품의 주연은 " +
