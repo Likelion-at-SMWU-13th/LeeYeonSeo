@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import type { CommentItemType } from "../constants/comment";
-
+import type { CommentItemType } from "../types/comment";
 // 댓글 배열에 대한 타입
 interface CommentProps {
   comments: CommentItemType[];
