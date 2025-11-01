@@ -2,6 +2,36 @@ import { create } from "zustand";
 import axios from "axios";
 import { devtools } from "zustand/middleware";
 
+type realAlbumData = {
+  id: string;
+  album_type: string;
+  artists: { name: string }[];
+  external_urls: { spotify: string };
+  images: { url: string }[];
+  name: string;
+  release_date: string;
+};
+
+type Album = {
+  id: string;
+  albumType: string;
+  artists: string;
+  externalUrl: string;
+  image: string;
+  name: string;
+  releaseDate: string;
+  marked: boolean;
+  saved: boolean;
+};
+
+type AlbumStore = {
+  albums: Album[];
+  addAlbum: (id: Album["id"]) => void;
+  removeAlbum: (id: Album["id"]) => void;
+  toggleAlbum: (id: Album["id"]) => void;
+  fetchAlbums: () => Promise<void>;
+};
+
 export const useAlbumStore = create(
   devtools((set) => ({
     albums: [],
@@ -18,7 +48,7 @@ export const useAlbumStore = create(
         );
         const albumItems = res.data?.albums?.items ?? [];
         console.log(albumItems);
-        const albumData = albumItems.map((album) => ({
+        const albumData = albumItems.map((album: realAlbumData) => ({
           id: album?.id,
           albumType: album?.album_type,
           artists: album?.artists?.[0]?.name ?? "",
@@ -35,21 +65,21 @@ export const useAlbumStore = create(
         console.error(e);
       }
     },
-    addAlbum: (id) =>
-      set((state) => ({
-        albums: state.albums.map((album) =>
+    addAlbum: (id: Album["id"]) =>
+      set((state: AlbumStore) => ({
+        albums: state.albums.map((album: Album) =>
           album.id === id ? { ...album, saved: true } : album
         ),
       })),
-    removeAlbum: (id) =>
-      set((state) => ({
-        albums: state.albums.map((album) =>
+    removeAlbum: (id: Album["id"]) =>
+      set((state: AlbumStore) => ({
+        albums: state.albums.map((album: Album) =>
           album.id === id ? { ...album, saved: false } : album
         ),
       })),
-    toggleAlbum: (id) =>
-      set((state) => ({
-        albums: state.albums.map((album) =>
+    toggleAlbum: (id: Album["id"]) =>
+      set((state: AlbumStore) => ({
+        albums: state.albums.map((album: Album) =>
           album.id === id ? { ...album, marked: !album.marked } : album
         ),
       })),
