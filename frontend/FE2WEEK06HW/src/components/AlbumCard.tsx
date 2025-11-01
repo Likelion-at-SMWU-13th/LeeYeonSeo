@@ -2,8 +2,9 @@ import { useAlbumStore } from "../store/store.ts";
 import * as S from "../styles/styled.ts";
 import { FaBookmark } from "react-icons/fa";
 import { MdAdd } from "react-icons/md";
+import type { album } from "./SavedAlbumCard.tsx";
 
-function AlbumCard({ album }) {
+function AlbumCard({ album }: album) {
   const addAlbum = useAlbumStore((s) => s.addAlbum);
   const toggleAlbum = useAlbumStore((s) => s.toggleAlbum);
 

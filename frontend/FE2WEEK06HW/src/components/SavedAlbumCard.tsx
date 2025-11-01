@@ -2,8 +2,11 @@ import { useAlbumStore } from "../store/store.ts";
 import * as S from "../styles/styled.ts";
 import { TiDelete } from "react-icons/ti";
 import { FaBookmark } from "react-icons/fa";
+import { type Album } from "../store/store.ts";
 
-function SavedAlbumCard({ album }) {
+export type album = { album: Album };
+
+function SavedAlbumCard({ album }: album) {
   const removeAlbum = useAlbumStore((s) => s.removeAlbum);
   const toggleAlbum = useAlbumStore((s) => s.toggleAlbum);
 
