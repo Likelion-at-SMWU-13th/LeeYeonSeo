@@ -2,7 +2,7 @@ import { create } from "zustand";
 import axios from "axios";
 import { devtools } from "zustand/middleware";
 
-type realAlbumData = {
+export type realAlbumData = {
   id: string;
   album_type: string;
   artists: { name: string }[];
@@ -12,7 +12,7 @@ type realAlbumData = {
   release_date: string;
 };
 
-type Album = {
+export type Album = {
   id: string;
   albumType: string;
   artists: string;
@@ -24,7 +24,7 @@ type Album = {
   saved: boolean;
 };
 
-type AlbumStore = {
+export type AlbumStore = {
   albums: Album[];
   addAlbum: (id: Album["id"]) => void;
   removeAlbum: (id: Album["id"]) => void;
@@ -32,7 +32,7 @@ type AlbumStore = {
   fetchAlbums: () => Promise<void>;
 };
 
-export const useAlbumStore = create(
+export const useAlbumStore = create<AlbumStore>()(
   devtools((set) => ({
     albums: [],
     fetchAlbums: async () => {
